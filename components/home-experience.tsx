@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icon } from "@/components/icon";
-import { looks, shoppingGuides, formatRand } from "@/lib/catalog";
+import { looks, shoppingGuides } from "@/lib/catalog";
+import { AffiliateInvite } from "@/components/affiliate-invite";
 import { LookCard } from "@/components/look-card";
 
 export function HomeExperience() {
@@ -21,6 +22,7 @@ export function HomeExperience() {
         <div className="hero-squiggle">✳</div>
       </div>
     </section>
+    <div className="container affiliate-placement"><AffiliateInvite /></div>
     <div className="ticker"><div className="ticker-inner">GOOD STYLE ISN&apos;T ABOUT THE PRICE <span>✳</span> DISCOVER MORE, SPEND WISELY <span>✳</span> GOOD STYLE ISN&apos;T ABOUT THE PRICE <span>✳</span> DISCOVER MORE, SPEND WISELY <span>✳</span></div></div>
     <section className="section container">
       <div className="section-topline"><span className="eyebrow">01 / FIND YOUR MOOD</span><Link href="/discover" className="small-link">Explore all edits <Icon name="arrow-up-right" size={16}/></Link></div>
@@ -41,6 +43,6 @@ export function HomeExperience() {
     </section>
     <section className="mini-calculator container"><div><span className="eyebrow">YOUR MONEY, YOUR RULES</span><h2>The only number that matters? <em>Your final total.</em></h2><p>Play with different savings scenarios before you go shopping.</p></div><Link href="/tools/savings-calculator" className="button button-dark">Calculate your savings <Icon name="arrow-right"/></Link></section>
     <section className="final-cta"><div className="container final-cta-inner"><span className="eyebrow">A GOOD FIND IS A GOOD FEELING</span><h2>Come for the looks.<br/><em>Stay for the smart finds.</em></h2><Link href="/discover" className="button button-dark button-large">Start exploring <Icon name="arrow-up-right"/></Link><span className="cta-doodle">✳</span></div></section>
-    <div className="disclosure-strip container"><Icon name="info" size={18}/><p>CartMuse is an independent editorial discovery site. Looks are inspiration, not live SHEIN product listings; stated budgets are shopping goals, not verified prices. Some outbound links may eventually earn a commission. <Link href="/disclosure">Our disclosure</Link>.</p></div>
+    <div className="disclosure-strip container"><Icon name="info" size={18}/><p>CartMuse is an independent editorial discovery site. Looks are inspiration, not live SHEIN product listings; stated budgets are shopping goals, not verified prices. The SHEIN invite link may earn CartMuse a commission or referral reward from qualifying activity. <Link href="/disclosure">Our disclosure</Link>.</p></div>
   </>;
 }

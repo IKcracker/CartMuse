@@ -1,5 +1,8 @@
-export const SHOP_URL =
-  process.env.NEXT_PUBLIC_SHEIN_AFFILIATE_URL?.trim() || "https://www.shein.com/";
+export const SHEIN_SEARCH_CODE = "S2AXVG7";
+export const SHEIN_SHARE_URL =
+  process.env.NEXT_PUBLIC_SHEIN_AFFILIATE_URL?.trim() ||
+  "https://onelink.shein.com/57/65dw0jfxw8iz";
+export const SHOP_URL = SHEIN_SHARE_URL;
 
 export const categories = ["All", "Dresses", "Streetwear", "Accessories", "Beauty", "Footwear", "Workwear"] as const;
 export type Category = (typeof categories)[number];

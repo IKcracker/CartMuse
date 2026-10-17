@@ -1,3 +1,19 @@
 import type { Metadata } from "next";
-export const metadata:Metadata={title:"Affiliate disclosure"};
-export default function DisclosurePage(){return <main className="legal-page container"><span className="eyebrow">TRANSPARENCY MATTERS</span><h1>Affiliate disclosure</h1><p>CartMuse is an independent editorial fashion discovery and shopping guidance website. We are not SHEIN, and we are not endorsed by or officially partnered with SHEIN merely because we mention the brand.</p><h2>About outbound links</h2><p>Some outbound store links may be affiliate links. If a qualifying purchase is completed after using one, CartMuse may earn a commission at no additional cost to you. Whether a link is eligible for affiliate tracking depends on the retailer&apos;s program terms. We do not currently guarantee that any link produces commission.</p><h2>About editorial content</h2><p>Fashion photos are inspirational examples, not exact products for sale. Budget amounts are illustrative shopping targets rather than live item prices. We do not claim codes, discounts, cashback, or rewards that have not been independently verified.</p><h2>How to shop safely</h2><p>Verify the final price, product availability, coupon eligibility and checkout terms with the retailer before you purchase. Any referral code supplied in the future must be used according to the official program instructions.</p></main>;}
+
+export const metadata: Metadata = { title: "Affiliate disclosure" };
+
+export default function DisclosurePage() {
+  return <div className="legal-page container">
+    <span className="eyebrow">TRANSPARENCY MATTERS</span>
+    <h1>Affiliate disclosure</h1>
+    <p>CartMuse is an independent editorial fashion discovery and shopping guidance website. We are not SHEIN, and this website is not operated or endorsed by SHEIN.</p>
+    <h2>Our SHEIN sharing link and search code</h2>
+    <p>CartMuse shares a SHEIN invitation link and the search code S2AXVG7, provided by the operator of this website through a SHEIN affiliate account. The code is intended for the SHEIN app search box, not the checkout coupon field. CartMuse may earn an affiliate commission or referral reward when a qualifying customer action is properly tracked. Tracking, qualification and payment depend on SHEIN program rules; we cannot guarantee commissions or savings.</p>
+    <h2>Promotional claims</h2>
+    <p>The shared SHEIN invitation advertises a 60% new-user coupon. CartMuse has not independently verified whether this promotion is currently available to any particular visitor. Minimum-spend requirements, eligibility, exclusions, expiry and actual checkout prices are determined by SHEIN and may change.</p>
+    <h2>Editorial content</h2>
+    <p>Fashion photos are editorial inspiration, not exact products for sale or images of verified SHEIN inventory. Illustrative budget amounts are shopping targets rather than live product prices.</p>
+    <h2>Shopping safely</h2>
+    <p>Confirm all promotions, eligibility, item details, shipping charges, and the final payable amount directly with SHEIN before making a purchase.</p>
+  </div>;
+}

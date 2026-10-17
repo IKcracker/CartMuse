@@ -7,7 +7,7 @@ import { Icon } from "@/components/icon";
 
 const navItems = [
   { href: "/discover", label: "Discover" },
-  { href: "/deals", label: "The deal edit" },
+  { href: "/shein-code", label: "SHEIN code" },
   { href: "/tools/savings-calculator", label: "Savings calculator" },
   { href: "/guide", label: "Shopping guide" },
 ];
@@ -43,7 +43,7 @@ export function SiteHeader() {
         </nav>
         <div className="header-actions">
           <Link href="/discover?view=saved" className="icon-button saved-link" aria-label={"Saved looks (" + savedCount + ")"}><Icon name="heart" size={21} />{savedCount > 0 && <span className="saved-count">{savedCount}</span>}</Link>
-          <Link href="/discover" className="button button-dark header-cta">Find your look <Icon name="arrow-up-right" size={17} /></Link>
+          <Link href="/shein-code" className="button button-dark header-cta">Shop my SHEIN picks <Icon name="arrow-up-right" size={17} /></Link>
           <button type="button" className="icon-button menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}><Icon name={open ? "close" : "menu"} size={24} /></button>
         </div>
       </div>
@@ -60,7 +60,7 @@ export function SiteFooter() {
         <p>Good taste. Better decisions.<br/>Your independent destination for finds worth saving.</p>
         <div className="footer-stamp"><Icon name="sparkles" size={17}/> MADE FOR THE LOVE OF A GOOD FIND</div>
       </div>
-      <div className="footer-column"><h3>Explore</h3><Link href="/discover">All looks</Link><Link href="/deals">The deal edit</Link><Link href="/tools/savings-calculator">Savings calculator</Link><Link href="/guide">Shopping guide</Link></div>
+      <div className="footer-column"><h3>Explore</h3><Link href="/discover">All looks</Link><Link href="/deals">The deal edit</Link><Link href="/shein-code">SHEIN code</Link><Link href="/tools/savings-calculator">Savings calculator</Link><Link href="/guide">Shopping guide</Link></div>
       <div className="footer-column"><h3>CartMuse</h3><Link href="/about">Our story</Link><Link href="/disclosure">Affiliate disclosure</Link><Link href="/privacy">Privacy</Link><a href="https://www.shein.com/" target="_blank" rel="noopener noreferrer">SHEIN official site <Icon name="arrow-up-right" size={13}/></a></div>
       <div className="footer-signoff"><span>BEAUTY IN THE BUDGET.</span><p>Style should feel good.<br/>So should the total.</p><span className="signoff-flower">✳</span></div>
     </div>
