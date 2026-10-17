@@ -8,17 +8,12 @@ import { categories, looks, type Category } from "@/lib/catalog";
 
 function Explorer() {
   const params=useSearchParams();
-  const [category,setCategory]=useState<Category>("All");
+  const [category,setCategory]=useState<Category>(() => { const requested = params.get("category"); return requested && categories.includes(requested as Category) ? requested as Category : "All"; });
   const [search,setSearch]=useState("");
   const [maxBudget,setMaxBudget]=useState("All budgets");
   const [sort,setSort]=useState("Featured");
-  const [savedOnly,setSavedOnly]=useState(false);
+  const [savedOnly,setSavedOnly]=useState(() => params.get("view") === "saved");
   const [savedIds,setSavedIds]=useState<string[]>([]);
-  useEffect(()=>{
-    const requested=params.get("category");
-    if (requested && categories.includes(requested as Category)) setCategory(requested as Category);
-    if (params.get("view")==="saved") setSavedOnly(true);
-  },[params]);
   useEffect(()=>{
     const sync=()=>{try {const value=JSON.parse(localStorage.getItem("cartmuse:saved")||"[]");setSavedIds(Array.isArray(value)?value:[]);}catch{setSavedIds([]);}};
     sync();window.addEventListener("cartmuse:saved-changed",sync);window.addEventListener("storage",sync);

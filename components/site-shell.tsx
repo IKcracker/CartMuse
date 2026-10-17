@@ -31,7 +31,6 @@ export function SiteHeader() {
     };
   }, []);
 
-  useEffect(() => { setOpen(false); }, [pathname]);
 
   return <>
     <div className="announcement"><span className="announcement-star">✳</span> YOUR DAILY DOSE OF STYLE, MINUS THE OVERSPEND <span className="announcement-star">✳</span></div>
@@ -47,7 +46,7 @@ export function SiteHeader() {
           <button type="button" className="icon-button menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}><Icon name={open ? "close" : "menu"} size={24} /></button>
         </div>
       </div>
-      {open && <nav className="mobile-nav" aria-label="Mobile navigation">{navItems.map((item) => <Link href={item.href} key={item.href}>{item.label}<Icon name="arrow-up-right" size={18}/></Link>)}<Link href="/about">About CartMuse<Icon name="arrow-up-right" size={18}/></Link></nav>}
+      {open && <nav className="mobile-nav" aria-label="Mobile navigation">{navItems.map((item) => <Link href={item.href} key={item.href} onClick={() => setOpen(false)}>{item.label}<Icon name="arrow-up-right" size={18}/></Link>)}<Link href="/about" onClick={() => setOpen(false)}>About CartMuse<Icon name="arrow-up-right" size={18}/></Link></nav>}
     </header>
   </>;
 }
