@@ -33,7 +33,7 @@ export default function SheinCodePage() {
       <details><summary>Does everyone receive a 60% discount?</summary><p>Not necessarily. The supplied invitation advertises a 60% new-user coupon, but CartMuse cannot independently confirm its current availability or eligibility. SHEIN determines which visitors qualify and what offer appears at checkout.</p></details>
       <details><summary>Does CartMuse earn from this link?</summary><p>CartMuse may receive affiliate commission or a referral reward for qualifying activity that SHEIN successfully attributes to the account. This is not guaranteed. <Link href="/disclosure" style={{textDecoration:"underline"}}>Read the affiliate disclosure</Link>.</p></details>
       <details><summary>Can I still browse outfit ideas here?</summary><p>Absolutely. <Link href="/discover" style={{textDecoration:"underline"}}>Browse the CartMuse editorial edits</Link> for style inspiration. These are not live SHEIN catalog items.</p></details>
-      <p style={{marginTop:"25px"}}><Link href="/deals" className="text-link">Explore the shopping guide <Icon name="arrow-right" size={17}/></Link></p>
+      <p style={{marginTop:"25px"}}><Link href="/shein-offers" className="text-link">Explore other SHEIN campaigns <Icon name="arrow-right" size={17}/></Link></p>
     </section>
   </div>;
 }

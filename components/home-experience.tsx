@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { looks, shoppingGuides } from "@/lib/catalog";
-import { AffiliateInvite } from "@/components/affiliate-invite";
+import { CampaignShowcase } from "@/components/affiliate-invite";
 import { LookCard } from "@/components/look-card";
 
 export function HomeExperience() {
@@ -22,7 +22,7 @@ export function HomeExperience() {
         <div className="hero-squiggle">✳</div>
       </div>
     </section>
-    <div className="container affiliate-placement"><AffiliateInvite /></div>
+    <div className="container affiliate-placement"><CampaignShowcase /></div>
     <div className="ticker"><div className="ticker-inner">GOOD STYLE ISN&apos;T ABOUT THE PRICE <span>✳</span> DISCOVER MORE, SPEND WISELY <span>✳</span> GOOD STYLE ISN&apos;T ABOUT THE PRICE <span>✳</span> DISCOVER MORE, SPEND WISELY <span>✳</span></div></div>
     <section className="section container">
       <div className="section-topline"><span className="eyebrow">01 / FIND YOUR MOOD</span><Link href="/discover" className="small-link">Explore all edits <Icon name="arrow-up-right" size={16}/></Link></div>

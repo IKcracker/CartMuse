@@ -3,25 +3,26 @@
 Independent editorial fashion discovery website built with Next.js 16, React 19 and Tailwind CSS 4.
 
 ## Start
-
 Run `npm ci` and `npm run dev`. For checks, run `npm run lint` and `npm run build`.
 
-## SHEIN sharing integration
+## SHEIN campaign integrations
 
-The project now includes the website owner's SHEIN search code `S2AXVG7` and supplied public invitation URL `https://onelink.shein.com/57/65dw0jfxw8iz`.
+Two distinct user-supplied public affiliate shares are configured in `lib/campaigns.ts`:
 
-- Main landing page shows an invitation card
-- Dedicated discoverable `/shein-code` guide with copy-code interaction
-- Deal finder displays the card and routes shoppers to the same public invitation
-- Navigation and footer link to the dedicated guide
-- Outbound referral links use `rel="sponsored noopener noreferrer"`
-- Program disclosure explicitly describes possible affiliate earnings and the limits of coupon claims
+| Campaign | App search code | Shared link | Advertised promotion |
+| --- | --- | --- | --- |
+| Exclusive picks | S2AXVG7 | https://onelink.shein.com/57/65dw0jfxw8iz | 60% new-user coupon |
+| Women's clothing sale | UQXQNT3 | https://onelink.shein.com/57/65dxq18p51jv | Up to 80% off |
 
-**Important:** This is a shared invitation and app search code, *not* a verified direct product feed, API connection, or checkout coupon. The source share message advertises a 60% new-user coupon, but availability and eligibility have not been independently verified.
+Both codes are for the **SHEIN app search bar, not checkout**. No discount is independently verified, and actual savings, qualifying items and referral attribution depend on SHEIN terms.
+
+Visitors can choose a campaign from `/shein-offers`, copy its code, open its unique affiliate link, and read instructions on `/shein-code` or `/shein-sale`. The homepage and deal finder display both; no campaign is silently replaced.
 
 ## Environment
 
-Copy `.env.example` to `.env.local`. Set `NEXT_PUBLIC_SITE_URL` to your production domain. Optionally set `NEXT_PUBLIC_SHEIN_AFFILIATE_URL` to override the default public invitation URL if SHEIN rotates your tracking link.
+Copy `.env.example` to `.env.local`. Set `NEXT_PUBLIC_SITE_URL` to your production domain. To rotate links later, override:
+- `NEXT_PUBLIC_SHEIN_AFFILIATE_URL` for exclusive picks.
+- `NEXT_PUBLIC_SHEIN_WOMENS_SALE_URL` for women's sale.
 
 ## Features
 

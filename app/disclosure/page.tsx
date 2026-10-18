@@ -7,13 +7,13 @@ export default function DisclosurePage() {
     <span className="eyebrow">TRANSPARENCY MATTERS</span>
     <h1>Affiliate disclosure</h1>
     <p>CartMuse is an independent editorial fashion discovery and shopping guidance website. We are not SHEIN, and this website is not operated or endorsed by SHEIN.</p>
-    <h2>Our SHEIN sharing link and search code</h2>
-    <p>CartMuse shares a SHEIN invitation link and the search code S2AXVG7, provided by the operator of this website through a SHEIN affiliate account. The code is intended for the SHEIN app search box, not the checkout coupon field. CartMuse may earn an affiliate commission or referral reward when a qualifying customer action is properly tracked. Tracking, qualification and payment depend on SHEIN program rules; we cannot guarantee commissions or savings.</p>
+    <h2>Our SHEIN invitations and app search codes</h2>
+    <p>We display two campaign shares provided through the CartMuse operator's SHEIN affiliate account. S2AXVG7 corresponds to an exclusive picks invitation; UQXQNT3 corresponds to a women's clothing sale invitation. Both are intended to be entered in the SHEIN app search bar, not at checkout. Qualifying activity through referral links or app campaigns may earn CartMuse a commission or referral reward, subject to SHEIN's attribution and program rules. We cannot guarantee commission or savings.</p>
     <h2>Promotional claims</h2>
-    <p>The shared SHEIN invitation advertises a 60% new-user coupon. CartMuse has not independently verified whether this promotion is currently available to any particular visitor. Minimum-spend requirements, eligibility, exclusions, expiry and actual checkout prices are determined by SHEIN and may change.</p>
+    <p>The shared messages advertise a 60% coupon for new users and up to 80% off women's clothing, respectively. These messages are not evidence that an offer is currently available to a particular shopper. Up to 80% does not mean all products are 80% off. We have not independently verified campaign eligibility, exclusions, minimum spends, expiry or availability. SHEIN determines the final offer and checkout prices.</p>
     <h2>Editorial content</h2>
     <p>Fashion photos are editorial inspiration, not exact products for sale or images of verified SHEIN inventory. Illustrative budget amounts are shopping targets rather than live product prices.</p>
     <h2>Shopping safely</h2>
-    <p>Confirm all promotions, eligibility, item details, shipping charges, and the final payable amount directly with SHEIN before making a purchase.</p>
+    <p>Confirm all promotions, eligibility, item details, shipping charges and the final payable amount directly with SHEIN before making a purchase.</p>
   </div>;
 }
