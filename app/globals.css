@@ -56,40 +56,51 @@
 @media(max-width:1000px){.campaign-showcase-grid .affiliate-invite{padding:24px}.campaign-showcase-grid .invite-code-row{flex-wrap:wrap}}
 @media(max-width:720px){.campaign-showcase-grid{grid-template-columns:1fr}.campaign-showcase-heading{align-items:flex-start;flex-direction:column}.campaign-showcase-grid .invite-code-row{flex-wrap:nowrap}.campaign-showcase-grid .affiliate-invite{padding:22px}.campaign-showcase-grid .affiliate-invite h2{font-size:42px}}
 
-/* Consistent SVG starbursts: no platform-dependent Unicode glyphs on mobile. */
+/* Stable decorative icon layout. Avoid glyph-dependent font sizing and
+   transforms applied to CSS-generated ornaments. */
+.announcement{align-items:center}
 .announcement-star{display:block;width:12px;height:12px;flex:0 0 12px;color:#f0a5c8}
-.announcement-copy{min-width:0;text-align:center;line-height:1.35}
-.tiny-avatar{flex-shrink:0}
-.tiny-avatar-star{width:14px;height:14px;display:block}
-.hero-squiggle{width:68px;height:68px;display:block;pointer-events:none}
-.ticker-inner{display:flex;justify-content:center;align-items:center;gap:25px;min-width:max-content;position:relative;left:50%;transform:translateX(-50%);line-height:1.3}
+.announcement-copy{display:block;min-width:0;text-align:center;line-height:1.4}
+.tiny-avatar{flex:none}
+.tiny-avatar-star{display:block;width:14px;height:14px}
+.hero-squiggle{display:block;width:68px;height:68px;pointer-events:none}
+.ticker-inner{display:flex;align-items:center;justify-content:center;gap:24px;width:max-content;min-width:100%;max-width:none;position:relative;left:50%;transform:translateX(-50%);line-height:1.4}
 .ticker-star{display:block;width:17px;height:17px;flex:0 0 17px;color:#bb7999}
-.cta-doodle{width:86px;height:86px;display:block;pointer-events:none}
-.signoff-flower{width:68px;height:68px;display:block}
+.cta-doodle{display:block;width:86px;height:86px;pointer-events:none}
+.signoff-flower{display:block;width:68px;height:68px}
 .footer-intention{display:inline-flex;align-items:center;gap:5px}
-.footer-bottom-star{width:12px;height:12px;display:block;color:#c283a3;flex:none}
-/* The affiliate flourish uses CSS geometry rather than a font asterisk. */
-.affiliate-invite:before{content:"";width:165px;height:165px;right:-10px;top:-35px;font-size:0;line-height:normal;background:#e7cdd9;clip-path:polygon(50% 0%,58% 35%,85% 15%,65% 43%,100% 50%,65% 57%,85% 85%,58% 65%,50% 100%,42% 65%,15% 85%,35% 57%,0% 50%,35% 43%,15% 15%,42% 35%);opacity:.7}
-.affiliate-invite-sale:before{background:#d5d1bc}
+.footer-bottom-star{display:block;width:12px;height:12px;color:#c283a3;flex:none}
+.affiliate-invite:before{content:none!important}
+.affiliate-invite-copy,.affiliate-invite-action{isolation:isolate}
+.hero-gallery,.banner-art,.final-cta-inner{min-width:0}
+.hero,.banner-layout,.affiliate-invite{min-width:0}
+.affiliate-invite-action,.affiliate-invite-copy{min-width:0}
+.invite-code-row code{overflow-wrap:anywhere;min-width:0}
 @media(max-width:900px){
   .hero-squiggle{width:55px;height:55px}
-  .affiliate-invite:before{width:115px;height:115px;top:-25px;right:-18px}
+  .hero-gallery{max-width:100%}
+  .banner-art{width:100%}
 }
 @media(max-width:600px){
-  .announcement{gap:7px;padding:9px 10px}
+  html,body{max-width:100%;overflow-x:clip}
+  .announcement{gap:8px;padding:9px 12px}
   .announcement-star{width:10px;height:10px;flex-basis:10px}
-  .announcement-copy{font-size:8px;letter-spacing:.07em}
-  .tiny-avatar-star{width:13px;height:13px}
-  .hero-squiggle{left:23%;bottom:-2px;width:37px;height:37px}
-  .ticker-inner{gap:16px;font-size:8px;letter-spacing:.11em}
+  .announcement-copy{font-size:8px;letter-spacing:.06em}
+  .hero-squiggle{left:23%;bottom:1%;width:34px;height:34px}
+  .ticker{overflow:hidden}
+  .ticker-inner{gap:15px;font-size:8px;letter-spacing:.09em}
   .ticker-star{width:12px;height:12px;flex-basis:12px}
-  .cta-doodle{top:13px;right:5px;width:42px;height:42px;opacity:.42}
+  .cta-doodle{width:34px;height:34px;top:12px;right:9px;opacity:.28}
   .final-cta .eyebrow,.final-cta h2,.final-cta .button{position:relative;z-index:1}
   .footer-bottom-star{width:10px;height:10px}
-  .affiliate-invite:before{display:none}
+  .affiliate-invite-action{width:100%}
+  .invite-code-row{min-width:0;flex-wrap:wrap}
+  .campaign-showcase-grid .invite-code-row{flex-wrap:wrap}
+  .campaign-showcase-grid .invite-code-row code{font-size:clamp(24px,8vw,36px)}
+  .campaign-showcase-grid .affiliate-invite{overflow:hidden}
 }
 @media(max-width:380px){
-  .announcement-copy{font-size:7px;letter-spacing:.025em}
-  .hero-squiggle{width:30px;height:30px;left:21%}
-  .cta-doodle{width:30px;height:30px}
+  .announcement-copy{font-size:7px;letter-spacing:.02em}
+  .hero-squiggle{width:28px;height:28px;left:21%}
+  .cta-doodle{width:26px;height:26px}
 }
