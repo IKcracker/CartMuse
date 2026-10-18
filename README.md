@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CartMuse
 
-## Getting Started
+Independent editorial fashion discovery website built with Next.js 16, React 19 and Tailwind CSS 4.
 
-First, run the development server:
+## Start
+Run `npm ci` and `npm run dev`. For checks, run `npm run lint` and `npm run build`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## SHEIN campaign integrations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Two distinct user-supplied public affiliate shares are configured in `lib/campaigns.ts`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Campaign | App search code | Shared link | Advertised promotion |
+| --- | --- | --- | --- |
+| Exclusive picks | S2AXVG7 | https://onelink.shein.com/57/65dw0jfxw8iz | 60% new-user coupon |
+| Women's clothing sale | UQXQNT3 | https://onelink.shein.com/57/65dxq18p51jv | Up to 80% off |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Both codes are for the **SHEIN app search bar, not checkout**. No discount is independently verified, and actual savings, qualifying items and referral attribution depend on SHEIN terms.
 
-## Learn More
+Visitors can choose a campaign from `/shein-offers`, copy its code, open its unique affiliate link, and read instructions on `/shein-code` or `/shein-sale`. The homepage and deal finder display both; no campaign is silently replaced.
 
-To learn more about Next.js, take a look at the following resources:
+## Environment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy `.env.example` to `.env.local`. Set `NEXT_PUBLIC_SITE_URL` to your production domain. To rotate links later, override:
+- `NEXT_PUBLIC_SHEIN_AFFILIATE_URL` for exclusive picks.
+- `NEXT_PUBLIC_SHEIN_WOMENS_SALE_URL` for women's sale.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+Editorial storefront, responsive discovery filters, local saved looks, SHEIN sharing flow, guided deal finder, educational shopping guides, ZAR savings calculator, disclosure and privacy pages, metadata, sitemap and robots.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Limitations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Curated images are editorial inspiration, not merchant items. Budget labels are examples, not validated prices. No backend offers administration, live SHEIN product feed, authenticated CRM, direct commission API, email notifications or AI service is included yet.
+
+Before launch verify program terms, visual asset licensing, deployment domain, coupon availability and tracking attribution in the SHEIN affiliate dashboard.
