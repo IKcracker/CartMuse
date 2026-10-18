@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "@/components/icon";
+import { Starburst } from "@/components/starburst";
 
 const navItems = [
   { href: "/discover", label: "Discover" },
@@ -33,7 +34,7 @@ export function SiteHeader() {
 
 
   return <>
-    <div className="announcement"><span className="announcement-star">✳</span> YOUR DAILY DOSE OF STYLE, MINUS THE OVERSPEND <span className="announcement-star">✳</span></div>
+    <div className="announcement"><Starburst className="announcement-star" /><span className="announcement-copy">YOUR DAILY DOSE OF STYLE, MINUS THE OVERSPEND</span><Starburst className="announcement-star" /></div>
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="logo" aria-label="CartMuse home">cart<span>muse</span><span className="logo-period">.</span></Link>
@@ -61,8 +62,8 @@ export function SiteFooter() {
       </div>
       <div className="footer-column"><h3>Explore</h3><Link href="/discover">All looks</Link><Link href="/deals">The deal edit</Link><Link href="/shein-offers">SHEIN offers</Link><Link href="/shein-code">Exclusive picks</Link><Link href="/shein-sale">Women&apos;s sale</Link><Link href="/tools/savings-calculator">Savings calculator</Link><Link href="/guide">Shopping guide</Link></div>
       <div className="footer-column"><h3>CartMuse</h3><Link href="/about">Our story</Link><Link href="/disclosure">Affiliate disclosure</Link><Link href="/privacy">Privacy</Link><a href="https://www.shein.com/" target="_blank" rel="noopener noreferrer">SHEIN official site <Icon name="arrow-up-right" size={13}/></a></div>
-      <div className="footer-signoff"><span>BEAUTY IN THE BUDGET.</span><p>Style should feel good.<br/>So should the total.</p><span className="signoff-flower">✳</span></div>
+      <div className="footer-signoff"><span>BEAUTY IN THE BUDGET.</span><p>Style should feel good.<br/>So should the total.</p><Starburst className="signoff-flower" /></div>
     </div>
-    <div className="container footer-bottom"><span>© 2026 CartMuse. All rights reserved.</span><span>Independent platform. Not affiliated with or endorsed by SHEIN.</span><span>Made with intention ✳</span></div>
+    <div className="container footer-bottom"><span>© 2026 CartMuse. All rights reserved.</span><span>Independent platform. Not affiliated with or endorsed by SHEIN.</span><span className="footer-intention">Made with intention <Starburst className="footer-bottom-star" /></span></div>
   </footer>;
 }
